@@ -4,6 +4,7 @@ class BinVO(models.Model):
     closet_name = models.CharField(max_length=100)
     bin_number = models.PositiveSmallIntegerField()
     bin_size = models.PositiveSmallIntegerField()
+    import_href = models.URLField(null=True)
 
 class Shoe(models.Model):
     manufacturer = models.CharField(max_length=200)
