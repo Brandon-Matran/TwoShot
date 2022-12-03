@@ -22,7 +22,6 @@ class HatListEncoder(ModelEncoder):
 class HatDetailEncoder(ModelEncoder):
     model = Hat
     properties = [
-        "model",
         "fabric",
         "style_name",
         "color",
@@ -45,9 +44,8 @@ def api_list_hats(request):
     else:
         content = json.loads(request.body)
         try:
-            # location = LocationVO.objects.get(id=content["location"])
             location_href = content["location"]
-            location = LocationVO.objects.get(import_href=location_href)
+            location = LocationVO.objects.get(id=content["location"])
             content["location"] = location
         except LocationVO.DoesNotExist:
             return JsonResponse(
@@ -88,7 +86,7 @@ def api_show_hat(request, pk):
                 content["location"] = location
         except LocationVO.DoesNotExist:
             return JsonResponse(
-                {"message": "Invalid state abbreviation"},
+                {"message": "Invalid location"},
                 status=400,
             )
         Hat.objects.filter(id=pk).update(**content)
