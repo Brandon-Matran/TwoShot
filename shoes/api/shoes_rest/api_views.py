@@ -19,7 +19,9 @@ class ShoeListEncoder(ModelEncoder):
         "id",
         "manufacturer",
         "model_name",
+        "color",
         "bin",
+        "picture_url",
     ]
     def get_extra_data(self, o):
         return {"bin": o.bin.closet_name}
@@ -102,4 +104,3 @@ def api_show_shoes(request, id):
             ShoeDetailEncoder,
             safe=False
         )
-
