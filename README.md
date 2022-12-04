@@ -47,7 +47,7 @@ In your command terminal type:
         docker-compose up
 
 
-## URLS and Ports
+## Ports
 
 Port 3000 - Connect to React APP
 
@@ -63,7 +63,6 @@ Port 8100 - Wardrobe API
 
 ## Design
 
-https://gitlab.com/b_matran/microservice-two-shot/-/blob/brandon/Design.jpg
 
 ## Wardrobe API
 
@@ -106,8 +105,9 @@ BinVO (Value Object to Bin) This is needed so that we can make changes to our sh
 | DELETE        | http://localhost:8100/api/shoes/<int:pk>/| DELETE request to Delete Shoe|
 
 
+# Insomnia Requests
 
-
+https://gitlab.com/b_matran/microservice-two-shot/-/blob/Test/InsomniaRequestsShoes.jpg
 
 ## Hats microservice
 
