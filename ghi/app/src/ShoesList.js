@@ -3,6 +3,7 @@ import React from "react"
 function ShoesList(props) {
 
   const deleteShoe = async (shoeId) => {
+
     fetch(`http://localhost:8080/api/shoes/${shoeId}/`, {
         method: 'DELETE',
         headers: {
@@ -26,7 +27,7 @@ function ShoesList(props) {
       </thead>
       <tbody>
         {props.shoes.map((shoe) => {
-          console.log(shoe)
+          console.log(props.shoes.map)
           return (
             <tr key={shoe.id}>
               <td>{shoe.manufacturer}</td>
