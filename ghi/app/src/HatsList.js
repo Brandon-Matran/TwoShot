@@ -43,8 +43,9 @@ render () {
         </thead>
         <tbody>
           {this.state.hats.map(hat => {
+            console.log(hat)
             return (
-              <tr key={hat.id}>
+              <tr key={hat.href}>
                 <td>{ hat.fabric }</td>
                 <td>{ hat.style_name }</td>
                 <td>{ hat.color}</td>
@@ -53,7 +54,7 @@ render () {
                 <td>{ hat.location.shelf_number}</td>
                 <td>
                     <form>
-                        <button onClick={() => this.delete(hat.id)}>Delete</button>
+                        <button onClick={() => this.delete(hat.href)}>Delete</button>
                     </form>
                 </td>
 
