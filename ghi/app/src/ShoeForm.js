@@ -87,8 +87,6 @@ async componentDidMount() {
     }
   }
 
-
-
     render () {
         return (
             <div className="container">
