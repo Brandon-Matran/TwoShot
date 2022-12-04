@@ -63,6 +63,7 @@ Port 8100 - Wardrobe API
 
 ## Design
 
+![](Diagram.jpg)
 
 ## Wardrobe API
 
@@ -107,8 +108,9 @@ BinVO (Value Object to Bin) This is needed so that we can make changes to our sh
 
 # Insomnia Requests
 
-![](Diagram.jpg)
-https://gitlab.com/b_matran/microservice-two-shot/-/blob/Test/InsomniaRequestsShoes.jpg
+![](InsomniaRequestShoes.jpg)
+
+
 
 ## Hats microservice
 
