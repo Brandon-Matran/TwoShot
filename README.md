@@ -107,6 +107,7 @@ BinVO (Value Object to Bin) This is needed so that we can make changes to our sh
 
 # Insomnia Requests
 
+![](Diagram.jpg)
 https://gitlab.com/b_matran/microservice-two-shot/-/blob/Test/InsomniaRequestsShoes.jpg
 
 ## Hats microservice
