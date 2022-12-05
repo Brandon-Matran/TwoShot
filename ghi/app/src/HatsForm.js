@@ -34,7 +34,7 @@ class HatForm extends React.Component {
     const response = await fetch(hatUrl, fetchConfig);
     if (response.ok) {
       const newHat = await response.json();
-      console.log(newHat);
+  
 
       const cleared = {
         fabric: '',

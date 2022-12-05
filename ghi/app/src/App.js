@@ -9,23 +9,21 @@ import ImageSlider from './ImageSlider';
 
 function App(props) {
 
-if (props.hats === undefined || props.shoes === undefined) {
-  return null;
-}
+
   return (
     <BrowserRouter>
       <Nav />
       <div className="container">
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="hats">
-            <Route index element={<HatsList hats={props.hats} />} />
+          <Route path="hats/">
+            /* <Route index element={<HatsList/>} />
             <Route path="new" element={<HatsForm />} />
           </Route>
-          <Route path="shoes">
-            <Route index element={<ShoesList shoes={props.shoes}/>} />
-            <Route path="new" element={<ShoeForm />} />
-          </Route>
+          <Route path="shoes/">
+            <Route index element={<ShoesList/>} />
+            <Route path="new" element={<ShoeForm />} /> */
+          /* </Route>
         </Routes>
       </div>
     </BrowserRouter>

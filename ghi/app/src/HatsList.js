@@ -25,7 +25,6 @@ async delete(hat) {
     }
 }
 const response = await fetch(url, fetchConfig)
-console.log(response)
 if (response.ok) {
 this.componentDidMount()
 }}
@@ -46,7 +45,6 @@ render () {
         </thead>
         <tbody>
           {this.state.hats.map(hat => {
-            console.log(hat)
             return (
               <tr key={hat.id}>
                 <td>{ hat.fabric }</td>

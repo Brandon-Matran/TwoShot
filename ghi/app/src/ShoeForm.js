@@ -30,7 +30,6 @@ async componentDidMount() {
     const response = await fetch(url)
     if (response.ok) {
         const data = await response.json();
-        console.log(data)
         this.setState({bins: data.bins})
     }
 }
@@ -79,7 +78,6 @@ async componentDidMount() {
     const response = await fetch(binUrl, fetchConfig);
     if (response.ok) {
       const newShoe = await response.json();
-      console.log(newShoe);
       this.setState({
         manufacturer: '',
         model_name: '',
