@@ -84,6 +84,7 @@ async componentDidMount() {
         picture_url: '',
         bin: '',
       });
+      window.location.href = `http://localhost:3000/shoes/`
     }
   }
 

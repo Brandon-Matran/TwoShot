@@ -27,7 +27,7 @@ function ShoesList(props) {
       </thead>
       <tbody>
         {props.shoes.map((shoe) => {
-          console.log(props.shoes.map)
+          console.log(shoe)
           return (
             <tr key={shoe.id}>
               <td>{shoe.manufacturer}</td>

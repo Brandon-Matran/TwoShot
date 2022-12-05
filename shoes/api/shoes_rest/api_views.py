@@ -47,22 +47,23 @@ def api_list_shoes(request):
     if request.method == "GET":
         shoes = Shoe.objects.all()
         return JsonResponse(
-            {"shoes": shoes},
+            {"shoes":shoes},
         ShoeListEncoder,
         safe=False)
     else:
         content = json.loads(request.body)
+        print(content)
         if "bin" in content:
             try:
                 bin_href = content["bin"]
                 bin = BinVO.objects.get(id = bin_href)
+                print(bin)
                 content["bin"] = bin
             except BinVO.DoesNotExist:
                 return JsonResponse(
                     {"message": "Invalid Bin ID"},
                     status = 400
                 )
-
         shoes = Shoe.objects.create(**content)
         return JsonResponse(
             shoes,
@@ -78,7 +79,7 @@ def api_show_shoes(request, id):
         return JsonResponse(
             {"shoes": shoes},
             ShoeDetailEncoder,
-            safe=False
+            safe=False,
         )
     elif request.method == "DELETE":
         count, _ = Shoe.objects.filter(id=id).delete()
