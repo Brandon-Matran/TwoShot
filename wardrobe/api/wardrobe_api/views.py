@@ -238,7 +238,7 @@ def api_bin(request, pk):
             bin = Bin.objects.get(id=pk)
             bin.delete()
             return JsonResponse(
-                bin,
+                {"Deleted the following:", bin},
                 encoder=BinEncoder,
                 safe=False,
             )

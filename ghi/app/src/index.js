@@ -9,19 +9,23 @@ root.render(
   </React.StrictMode>
 );
 
-async function loadHats() {
-  const response = await fetch('http://localhost:8090/api/hats/');
-  console.log(response);
-  if (response.ok) {
-    const data = await response.json();
+async function loadApp() {
+  const hatsResponse = await fetch('http://localhost:8090/api/hats/');
+
+  const shoesResponse = await fetch ('http://localhost:8080/api/shoes/');
+
+  if (hatsResponse.ok && shoesResponse.ok) {
+    const hatsData = await hatsResponse.json();
+    const shoesData = await shoesResponse.json();
+
     root.render(
       <React.StrictMode>
-        <App hats={data.hats} />
+        <App hats={hatsData.hats} shoes={shoesData.shoes}/>
       </React.StrictMode>
     );
   } else {
-    console.error(response);
+    console.error("Error fetching data");
   }
 }
 
-loadHats();
+loadApp();
