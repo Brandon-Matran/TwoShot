@@ -107,8 +107,7 @@ BinVO (Value Object to Bin) This is needed so that we can make changes to our sh
 
 
 # Insomnia Requests
-
-![](InsomniaRequestShoes.jpg)
+![](InsomniaRequestsShoes.jpg)
 
 
 
@@ -155,4 +154,5 @@ LocationVO (Value Object to Location) Required so that model changes can be made
 
 
 ## Insomnia Requests
-![](InsomniaRequestsHats.jpg)
+
+![](InsomniaRequestHats.jpg)
