@@ -1,5 +1,8 @@
 import React from "react"
-
+import { useNavigate } from 'react-router-dom'
+// function withNavigate(Component) {
+//   return (props) => <Component {...props} useNavigate={useNavigate()}/>
+// }
 
 class ShoeForm extends React.Component {
     constructor(props) {
@@ -84,6 +87,7 @@ async componentDidMount() {
         picture_url: '',
         bin: '',
       });
+      // this.props.useNavigate("/shoes/")
       window.location.href = `http://localhost:3000/shoes/`
     }
   }
@@ -133,4 +137,4 @@ async componentDidMount() {
 }
 
 
-export default ShoeForm
+export default ShoeForm;

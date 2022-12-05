@@ -1,6 +1,8 @@
 import React from "react"
 
+
 function ShoesList(props) {
+
 
   const deleteShoe = async (shoeId) => {
 
