@@ -1,6 +1,6 @@
 import React from 'react';
 
-class HatList extends React.Component {
+class HatsList extends React.Component {
   constructor () {
     super()
     this.state = {
@@ -67,4 +67,4 @@ render () {
   }
 }
 
-  export default HatList;
+  export default HatsList;

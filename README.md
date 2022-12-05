@@ -127,7 +127,7 @@ BinVO (Value Object to Bin) This is needed so that we can make changes to our sh
 
 
 
-Models
+## Models
 
 Hats ()
 - Fabric
@@ -143,7 +143,7 @@ LocationVO (Value Object to Location) Required so that model changes can be made
 - Shelf Number
 
 
-CRUD:
+## CRUD
 
 |   Method      |             URL                              |    What it does                    |
 | ------------- |:--------------------------------------------:| ----------------------------------:|
@@ -154,5 +154,6 @@ CRUD:
 | DELETE        | http://localhost:8090/api/hats/<int:pk>/     | DELETE request to Delete Hat       |
 
 
-Explain your models and integration with the wardrobe
-microservice, here.
+## Insomnia Requests
+
+![](InsomniaRequestHats.jpg)
