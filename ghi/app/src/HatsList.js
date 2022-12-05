@@ -24,8 +24,11 @@ async delete(hat) {
         'Content-Type': 'application/json'
     }
 }
-  await fetch(url, fetchConfig)
-}
+const response = await fetch(url, fetchConfig)
+console.log(response)
+if (response.ok) {
+this.componentDidMount()
+}}
 
 
 render () {
@@ -45,17 +48,15 @@ render () {
           {this.state.hats.map(hat => {
             console.log(hat)
             return (
-              <tr key={hat.href}>
+              <tr key={hat.id}>
                 <td>{ hat.fabric }</td>
                 <td>{ hat.style_name }</td>
                 <td>{ hat.color}</td>
-                <td>{ hat.picture_url }</td>
+                <td><img src={ hat.picture_url } className='img-thumbnail' width="100px" height="100px"/></td>
                 <td>{ hat.location.section_number}</td>
                 <td>{ hat.location.shelf_number}</td>
                 <td>
-                    <form>
-                        <button onClick={() => this.delete(hat.href)}>Delete</button>
-                    </form>
+                  <button onClick={() => this.delete(hat.id)}>Delete</button>
                 </td>
 
               </tr>
