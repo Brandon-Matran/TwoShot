@@ -106,7 +106,7 @@ BinVO (Value Object to Bin) This is needed so that we can make changes to our sh
 | DELETE        | http://localhost:8100/api/shoes/<int:pk>/| DELETE request to Delete Shoe|
 
 
-# Insomnia Requests
+# Insomnia Shoes Requests
 ![](InsomniaRequestsShoes.jpg)
 
 
@@ -153,6 +153,6 @@ LocationVO (Value Object to Location) Required so that model changes can be made
 | DELETE        | http://localhost:8090/api/hats/<int:pk>/     | DELETE request to Delete Hat       |
 
 
-## Insomnia Requests
+## Insomnia Hats Requests
 
 ![](InsomniaRequestHats.jpg)
