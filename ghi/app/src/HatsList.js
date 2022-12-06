@@ -39,6 +39,7 @@ render () {
             <th>Fabric</th>
             <th>Style Name</th>
             <th>Color</th>
+            <th>Image</th>
             <th>Section Number</th>
             <th>Shelf Number</th>
           </tr>
